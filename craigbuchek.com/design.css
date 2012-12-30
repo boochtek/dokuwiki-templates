@@ -1,0 +1,802 @@
+/**
+ * Design elements for default Template
+ *
+ * @author Andreas Gohr <andi@splitbrain.org>
+ * @author Anika Henke <henke@cosmocode.de>
+ */
+
+/* -------------- general elements --------------- */
+
+body {
+  font: 80% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+  background-color: __white__;
+  color: Black;
+  margin: 0;
+  padding: 0;
+}
+
+/* the document */
+#content div.page {
+  margin-top: 4px;
+  margin-left:  1em;
+  margin-right: 2em;
+  text-align: justify;
+}
+
+#content table {
+  font-size: 100%;
+  padding:0;
+  margin:0;
+}
+
+#content tr, #content td, #content th {padding:0; margin:0;}
+
+#content img {border:0}
+
+#content p {padding:0; margin: 0 0 1.0em 0;}
+
+#content hr {
+  border: 0px;
+  border-top: 1px solid __dark__;
+  text-align:center;
+  height: 0px;
+}
+
+#content div.nothing {
+  text-align:center;
+  margin: 2em;
+}
+
+/* ---------------- forms ------------------------ */
+
+#content form {
+  border: none;
+  margin: 0;
+  display: inline;
+}
+
+#content label.block {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+}
+
+#content label.simple {
+  display: block;
+  text-align: left;
+  font-weight: normal;
+}
+
+#content label.block input.edit {
+  width: 50%;
+}
+
+#content fieldset {
+  width: 300px;
+  text-align: center;
+  border: 1px solid __dark__;
+  padding: 0.5em;
+  margin: auto;
+}
+
+#content textarea.edit {
+  font-family:monospace;
+  border: 1px solid __dark__;
+  color: Black;
+  background-color: __white__;
+  font-size:14px;
+  padding: 3px;
+  width:100%;
+}
+
+#content input.edit, #content select.edit {
+  font-size: 100%;
+  border: 1px solid __dark__;
+  color: Black;
+  background-color: __white__;
+  vertical-align: middle;
+  margin: 1px;
+  padding: 0.20em 0.3em;
+  display: inline;
+}
+
+#content select.edit {
+  padding: 0.1em 0;
+}
+
+#content input.missing {
+  font-size: 100%;
+  border: 1px solid __dark__;
+  color: Black;
+  background-color: #ffcccc;
+  vertical-align: middle;
+  margin: 1px;
+  padding: 0.20em 0.3em;
+  display: inline;
+}
+
+/* edit form */
+#content div.toolbar, #content div#wiki__editbar {
+   margin:2px 0;
+   text-align: left;
+}
+#content div#size__ctl {
+   float:right;
+   width:40px;
+   height:2.7em;
+}
+#content #size__ctl img {
+   cursor: pointer;
+}
+#content div#wiki__editbar div.editButtons {
+   float: left;
+   padding: 0 1.0em 0.7em 0;
+}
+#content div#wiki__editbar div.summary {
+   float: left;
+}
+#content .nowrap {
+   white-space:nowrap;
+}
+
+/* --------- buttons ------------------- */
+
+
+input.button, button.button{
+  border: 1px solid __dark__;
+  color: Black;
+  background-color: __white__;
+  vertical-align: middle;
+  text-decoration:none;
+  font-size: 100%;
+  cursor: pointer;
+  margin: 1px;
+  padding: 0.125em 0.4em;
+  display: inline;
+}
+
+* html input.button, * html button.button{
+  height: 1.8em;
+  padding: 0;
+}
+
+div.secedit input.button {
+  border: 1px solid __dark__;
+  color: Black;
+  background-color: __white__;
+  vertical-align: middle;
+  text-decoration:none;
+  margin: 0px;
+  padding: 0px;
+  font-size: 10px;
+  cursor: pointer;
+  float:right;
+  display: inline;
+}
+
+/* ----------- page navigator ------------- */
+
+div.pagenav {
+    margin-top:1em;
+}
+
+div.pagenav-prev {
+    text-align:right;
+    float:left;
+    width:50%
+}
+
+div.pagenav-prev input.button {
+    margin-right:5px;
+}
+
+div.pagenav-next {
+    text-align:left;
+    float:right;
+    width:50%
+}
+
+div.pagenav-next input.button {
+    margin-left:5px;
+}
+
+/* --------------- Links ------------------ */
+
+#content a {
+  color:__extern__;
+  text-decoration:none;
+}
+#content a:hover {
+  color:__black__;
+  text-decoration:underline;
+}
+#content h1 a, #content h2 a, #content h3 a, #content h4 a, #content h5 a, #content h1 a:hover, #content h2 a:hover, #content h3 a:hover, #content h4 a:hover, #content h5 a:hover {
+  color:__black__;
+  text-decoration:none;
+}
+
+/* external link */
+#content a.urlextern{
+    padding: 1px 0px 1px 0px;
+    color:__extern__;
+    text-decoration:none;
+}
+#content a.urlextern:visited {
+  color:__extern__;
+}
+#content a.urlextern:hover {
+  text-decoration:underline;
+}
+
+/* windows share */
+#content a.windows{
+    background: transparent url(images/windows.gif) 0px 1px no-repeat;
+    padding: 1px 0px 1px 16px;
+    color:__extern__;
+    text-decoration:none;
+}
+#content a.windows:visited {
+  color:__extern__;
+}
+#content a.windows:hover {
+  text-decoration:underline;
+}
+
+/* interwiki link (icon are set by dokuwiki) */
+#content a.interwiki{
+    color:__extern__;
+    text-decoration:none;
+}
+#content a.interwiki:visited {
+  color:__extern__;
+}
+#content a.interwiki:hover {
+  text-decoration:underline;
+}
+
+/* link to some embedded media */
+#content a.media {
+  color:__extern__;
+  text-decoration:none;
+}
+#content a.media:hover {
+  color:__extern__;
+  text-decoration:underline
+}
+
+/* email link */
+#content a.mail {
+  background: transparent url(images/mail_icon.gif) 0px 1px no-repeat;
+  padding: 1px 0px 1px 16px;
+  color:__extern__;
+  text-decoration:none;
+}
+#content a.mail:hover {
+  text-decoration:underline;
+}
+
+/* existing wikipage */
+#content a.wikilink1:link    { color:__existing__; text-decoration:none }
+#content a.wikilink1:visited { color:__existing__; text-decoration:none }
+#content a.wikilink1:hover   { color:__existing__; text-decoration:underline }
+
+/* not existing wikipage */
+#content a.wikilink2:link    { color:__missing__; text-decoration:none }
+#content a.wikilink2:visited { color:__missing__; text-decoration:none }
+#content a.wikilink2:hover   { color:__missing__; text-decoration:underline }
+
+
+/* ------------- Page elements ----------------- */
+
+#content div.preview{
+  background:__lighter__;
+  margin-left:2em;
+  padding: 4px;
+  border: 1px dashed __black__;
+}
+
+#content div.breadcrumbs{
+  background-color: __lightgray__;
+  font-size:80%;
+  color: __darkgray__;
+  padding-left: 4px;
+}
+
+#content span.user{
+  color: __mediumgray__;
+  font-size: 90%;
+}
+
+#content li.minor {
+  color: __darkgray__;
+  font-style: italic;
+}
+
+/* embedded images */
+#content img.media {
+  margin: 3px;
+}
+
+#content img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#content img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#content img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#content img.middle {
+  vertical-align: middle;
+}
+
+#content acronym {
+  cursor: help;
+  border-bottom: 1px dotted __black__;
+}
+
+/* general headline setup */
+#content h1, #content h2, #content h3, #content h4, #content h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid __dark__;
+    clear: left;
+}
+
+/* special headlines */
+#content h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#content h2 {font-size: 150%; margin-left: 20px;}
+#content h3 {font-size: 140%; margin-left: 40px; border-bottom: none; font-weight: bold;}
+#content h4 {font-size: 120%; margin-left: 60px; border-bottom: none; font-weight: bold;}
+#content h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+#content div.level1 {margin-left: 3px;}
+#content div.level2 {margin-left: 23px;}
+#content div.level3 {margin-left: 43px;}
+#content div.level4 {margin-left: 63px;}
+#content div.level5 {margin-left: 83px;}
+
+/* unordered lists */
+#content ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 1.5em;
+  padding: 0;
+  color: __darker__;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#content ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 1.5em;
+  padding: 0;
+  color: __darker__;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#content .li {
+  color: __black__;
+  font-weight: normal;
+}
+
+#content ol {list-style-type: decimal}
+#content ol ol {list-style-type: upper-roman}
+#content ol ol ol {list-style-type: lower-alpha}
+#content ol ol ol ol {list-style-type: lower-greek}
+
+#content li.open {
+  list-style-image: url(images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#content li.closed {
+  list-style-image: url(images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#content blockquote {
+  border-left: 2px solid __dark__;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#content pre.pre {
+  font-size: 120%;
+  padding: 0.5em;
+  border: 1px dashed __dark__;
+  color: Black;
+  background-color: __lighter__;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#content pre.code {
+  font-size: 120%;
+  padding: 0.5em;
+  border: 1px dashed __dark__;
+  color: Black;
+  background-color: __lighter__;
+  overflow: auto;
+}
+
+/* inline code words */
+#content code {
+  font-size: 120%;
+}
+
+/* code blocks by file tag */
+#content pre.file {
+  font-size: 120%;
+  padding: 0.5em;
+  border: 1px dashed __dark__;
+  color: Black;
+  background-color: __medium__;
+  overflow: auto;
+}
+
+/* inline tables */
+#content table.inline {
+  background-color: __white__;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+#content table.inline th {
+  padding: 3px;
+  border: 1px solid __dark__;
+  background-color: __medium__;
+}
+
+#content table.inline td {
+  padding: 3px;
+  border: 1px solid __dark__;
+}
+
+/* ---------- table of contents ------------------- */
+
+div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  clear:both;
+}
+
+div.tocheader {
+  padding: 3px;
+  border: 1px solid __dark__;
+  background-color: __medium__;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  float:right;
+  margin-top:0.3em;
+  margin-right:3px;
+  cursor: pointer;
+}
+
+#toc__inside {
+  border: 1px solid __dark__;
+  background-color: __white__;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+ul.toc li {
+  background: transparent url(images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+a.toc {
+  color: __extern__;
+  text-decoration:none;
+}
+
+a.toc:hover {
+  color: __black__;
+  text-decoration:underline;
+}
+
+/* ---------------------------- Diff rendering --------------------------*/
+#content table.diff {
+  background:__white__;
+  width:100%;
+}
+#content td.diff-blockheader {font-weight:bold}
+#content table.diff th {
+  border-bottom: 1px solid __dark__;
+  font-size:120%;
+  width: 50%;
+  font-weight: normal;
+  text-align: left;
+}
+#content td.diff-addedline {
+    background:#ddffdd;
+    font-family: monospace;
+    font-size: 100%;
+}
+#content td.diff-deletedline {
+    background:#ffffbb;
+    font-family: monospace;
+    font-size: 100%;
+}
+#content td.diff-context {
+    background:__lighter__;
+    font-family: monospace;
+    font-size: 100%;
+}
+#content span.diffchange { color: red; }
+
+/* --------------------- footnotes -------------------------------- */
+
+#content div.footnotes{
+  clear:both;
+  border-top: 1px solid __dark__;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#content div.fn{
+  font-size:90%;
+}
+
+#content a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#content a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid __dark__;
+  background: __light__;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+* html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------- search result formating --------------- */
+#content .search_result{
+  margin-bottom: 6px;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+#content .search_snippet{
+  color: __mediumgray__;
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+#content .search_sep{
+  color: __black__;
+}
+
+#content .search_hit{
+  color: __black__;
+  background: __highlight__;
+}
+
+#content div.search_quickresult{
+  margin: 0 0 15px 30px;
+  padding: 0 10px 10px 0;
+  border-bottom: 1px dashed __dark__;
+}
+#content div.search_quickresult h3{
+  margin: 0 0 1.0em 0;
+  padding: 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#content ul.search_quickhits {
+  margin: 0 0 0.5em 1.0em;
+}
+
+#content ul.search_quickhits li {
+  margin: 0 1.0em 0 1.0em;
+  float:left;
+  width: 30%;
+}
+
+/* ------------------ Additional ---------------------- */
+
+div.footerinc {
+    text-align: center;
+}
+.footerinc a img {
+    opacity: 0.5;
+    border:0
+}
+
+.footerinc a:hover img {
+    opacity: 1;
+}
+
+/* ---------- AJAX quicksearch ----------- */
+
+div.ajax_qsearch {
+  position:absolute;
+  right:237px;;
+  width: 200px;
+  opacity: 0.9;
+  display:none;
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid __dark__;
+  background: __light__;
+  text-align: left;
+  padding: 4px;
+}
+
+/* --------- Toolbar -------------------- */
+button.toolbutton{
+  background-color: __white__;
+  padding: 0px;
+  margin: 0 1px 0 0;
+  border: 1px solid __dark__;
+  cursor: pointer;
+}
+
+div.picker {
+  width: 250px;
+  border: 1px solid __dark__;
+  background: __light__;
+}
+
+button.pickerbutton {
+  padding: 0px;
+  margin: 0 1px 1px 0;
+  border: 0;
+  background-color: transparent;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+/* ---------- Spellchecking ------------- */
+
+#content a.spell_error {
+  color: #f00;
+  text-decoration: underline;
+}
+
+#content div#spell__suggest {
+  background-color: __white__;
+  padding: 2px;
+  border: 1px solid __black__;
+  font-size:80%;
+  display: none;
+}
+
+#content div#spell__result {
+  border: 1px solid __dark__;
+  color: Black;
+  font-size:14px;
+  padding: 3px;
+  background-color: __lighter__;
+  display: none;
+}
+
+#content span.spell_noerr {
+  color: #093;
+}
+
+#content span.spell_wait {
+  color: #06c;
+}
+
+/* ---------------  Image Details  ----------------- */
+
+#content div.img_big {
+  float: left;
+  margin-right: 0.5em;
+}
+
+#content dl.img_tags dt {
+  font-weight: bold;
+  background-color: __medium__;
+}
+#content dl.img_tags dd {
+  background-color: __lightgray__;
+}
+
+#content div.imagemeta {
+  color: __darkgray__;
+  font-size: 70%;
+  line-height: 95%;
+}
+
+#content div.imagemeta img.thumb{
+  float:left;
+  margin-right: 0.1em;
+}
+
+/* -------------- Media Popup ---------------------- */
+
+#content div.mediaselect-right li, #content div.uploadform {
+  clear: both;
+}
+
+#content div.mediaedit div.data label{
+  display: block;
+  text-align: right;
+  width: 20%;
+  float: left;
+  margin-right: 0.5em;
+}
+
+#content div.mediaedit div.data input, #content div.mediaedit div.data textarea{
+  width: 75%;
+  padding: 0.1em;
+  margin: 0.1em;
+}
+
+#content div.mediaedit div.data input.button {
+  width: 10em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+

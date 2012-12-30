@@ -1,0 +1,38 @@
+#topinfo, #copyright {
+	background-color:#8888EE;
+}
+#topnav, #wiki-controls {
+	background-color:#CCCCFF;
+}
+#topmsgarea {
+	background-color:red;
+}
+#banner a:link, #banner a:visited, #banner a:hover, #banner a:active {
+	color:#8888DD;
+	text-decoration:none;
+}
+#content {
+	background-color:#EEEEFF;
+}
+#header {
+	width:100%;
+	background-color:#EEEEFF;
+}
+.sidebar, #leftX, #rightX {
+	background-color:#DDDDFF;
+}
+.nav li:hover {
+}
+/* This covers 3-levels deep of menus. If you need more levels, make sure this and the next rule are extended. */
+.nav li:hover a, .nav li:hover li:hover a, .nav li:hover li:hover li:hover a {
+	background-color:#333377;
+	color:#EEEEEE;
+}
+/* This makes sure that submenu items aren't highlighted just because their parent menu item is highlighted. */
+.nav li a, .nav li:hover li a, .nav li:hover li:hover li a {
+	background-color:transparent;
+	color:#000000;
+}
+.nav ul {
+	background:#DDDDFF;
+}

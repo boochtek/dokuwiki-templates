@@ -1,0 +1,69 @@
+html>body {overflow:scroll;} /* Force scrollbars on Firefox. */
+body {
+	font: 80% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+	margin:0;
+}
+#center {
+	width:99.9%;
+}
+#content {
+	border-right:2px solid black;
+	border-left:2px solid black;
+}
+#content p {
+	padding:0 0.5em;
+}
+#wiki-controls {
+	padding:2px 2px;
+	border-bottom:2px solid black;
+}
+#topinfo, #copyright, #topmsgarea {
+	padding:0 2px;
+	border-top:2px solid black;
+	border-bottom:2px solid black;
+}
+#topmsgarea {
+	display:none;
+}
+
+#banner {
+	font-size:2.5em;
+	font-weight:bold;
+  text-decoration:none;
+  font-variant:small-caps;
+  letter-spacing:2pt;
+
+}
+#content {
+	width:auto; height:auto;
+}
+#left.sidebar, #leftX {
+	vertical-align:top;
+	width:10em;
+}
+#right.sidebar, #rightX {
+	vertical-align:top;
+	width:10em;
+}
+#topinfo, #copyright {
+	font-size:0.8em;
+}
+#topinfo #youarehere, #wiki-controls .bar-left, #copyright span {
+	float:left;
+}
+#topinfo #loggedinas, #wiki-controls .bar-right, #pageinfo {
+	text-align:right;
+}
+/* .sidebar * {
+	padding:0 5px;
+} */
+#content {
+	padding:5px;
+}
+#badges {
+	text-align: center;
+}
+
+#wiki-controls .button, #wiki-controls .edit, #wiki-controls form {
+	display: inline;
+}
